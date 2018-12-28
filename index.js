@@ -11,7 +11,7 @@ var io = socketio(server, {
     pingTimeout: 3000,
     cookie: false,
 });
-server.listen(31585, () => console.log('listening on *:31585'));
+server.listen(process.env.PORT, () => console.log('listening on *:31585'));
 console.log('Port:'+process.env.PORT);
 
 
