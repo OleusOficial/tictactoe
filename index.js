@@ -18,7 +18,7 @@ io.on('connection', client => {
     var sessionID = client.id; 
     console.log('client connected: '+sessionID); 
     // Emitter
-    io.to(sessionID).emit('connected','Message');
+    io.emit('connected','Message');
     // ON
     client.on('disconnect', () => {console.log('client has left: '+sessionID)});
 });
