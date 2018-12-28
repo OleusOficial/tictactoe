@@ -12,6 +12,7 @@ var io = socketio(server, {
     cookie: false,
 });
 server.listen(3000, () => console.log('listening on *:3000'));
+console.log(process.env.PORT);
 
 
 io.on('connection', client => {
